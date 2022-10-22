@@ -22,6 +22,13 @@ async function searchCep() {
             console.log(error.message)
         }
     }
+    else if (cep.length === 0) {
+        cepStyle.style.border = '1px solid #ced4da'
+        cepStyle.style.outline = 'none'
+        cepStyle.style.background = 'transparent'
+        error.style.display = 'none'
+        return completeForm('', '', '', '')
+    }
     else {
         cepStyle.style.border = '1px solid red'
         cepStyle.style.outline = '1px solid red'
@@ -29,7 +36,6 @@ async function searchCep() {
         error.style.display = 'block'
     }
 }
-
 
 const completeForm = (street, district, state, city) => {
     document.getElementById('street').value = street;
