@@ -34,6 +34,7 @@ async function searchCep() {
         cepStyle.style.outline = '1px solid red'
         cepStyle.style.background = 'pink'
         error.style.display = 'block'
+        return completeForm('', '', '', '')
     }
 }
 
